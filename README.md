@@ -1,45 +1,68 @@
-# NextZen Events — Deployable starter
+# 🎉 NextZen Events – Smart Event Management Platform
 
-Responsive event-management web app built with Flask + SQLite.
+**NextZen Events** is a modern event management platform designed to simplify event planning, vendor discovery, and booking management. It helps users discover events and find suitable vendors based on location, category, and budget.
 
-## Included features
-- Event discovery with search, city and category filters
-- Logged-in users can list events
-- Vendor directory with categories, cities, sample prices and ratings
-- Vendor booking requests and request tracking
-- Account registration/login with hashed passwords
-- Admin dashboard to update booking request status
-- Responsive layout and `/health` endpoint
-- Sample event and vendor data created automatically
+## 🚀 Features
 
-## Run locally (Windows)
-1. Install Python 3.10+.
-2. Extract the ZIP and open the folder in VS Code/Terminal.
-3. Run:
-   ```powershell
-   python -m venv .venv
-   .venv\Scripts\activate
-   pip install -r requirements.txt
-   python app.py
-   ```
-4. Open http://127.0.0.1:5000
+- 🔍 **Event Discovery:** Search and filter events by city and category.
+- 🎪 **Vendor Directory:** Explore event vendors, services, prices, and ratings.
+- 📅 **Booking Management:** Submit vendor booking requests and track their status.
+- 🔐 **User Authentication:** Secure registration and login with password hashing.
+- 🛠️ **Admin Dashboard:** Manage booking requests and update booking statuses.
+- 📝 **Event Listing:** Registered users can publish their own events.
+- 📱 **Responsive Design:** User-friendly interface for desktop and mobile devices.
+- 🗄️ **Database Integration:** SQLite database for storing users, events, vendors, and bookings.
 
-## Deploy on Render
-1. Push the extracted files to a new GitHub repository.
-2. In Render choose **New + → Blueprint** and connect the repository.
-3. Render reads `render.yaml`; deploy and open the generated URL.
-4. Keep the persistent disk enabled for SQLite data.
+## 🛠️ Tech Stack
 
-Manual settings: build command `pip install -r requirements.txt`; start command `gunicorn app:app`. Set `SECRET_KEY` to a long random secret.
+- **Backend:** Python, Flask
+- **Frontend:** HTML, CSS, JavaScript (where applicable)
+- **Database:** SQLite
+- **Deployment:** Gunicorn, Render
+- **Version Control:** Git and GitHub
 
-## Demo admin
-Email: `admin@nextzen.local`  
-Password: `ChangeMe123!`
+## ⚙️ Installation and Setup
 
-Change the demo credentials before public launch.
+### 1. Clone the repository
 
-## Routes
-`/` events · `/events/new` create event · `/vendors` vendor discovery · `/vendors/<id>/book` booking request · `/my-bookings` request tracking · `/register` · `/login` · `/admin` · `/health`
+```bash
+git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
+cd YOUR_REPOSITORY
+```
 
-## Production notes
-Sample vendors, ratings, phone numbers and events are demonstration data; replace them with verified information. Payments, email/SMS notifications, image uploads, AI chatbot, digital contracts and native mobile apps are not integrated. SQLite is suitable for a demo/small single-instance deployment; consider managed PostgreSQL for larger production use.
+Replace `YOUR_USERNAME` and `YOUR_REPOSITORY` with your actual GitHub details.
+
+### 2. Create a virtual environment
+
+```bash
+python -m venv .venv
+```
+
+Activate it on Windows:
+
+```bash
+.venv\Scripts\activate
+```
+
+### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run the application
+
+```bash
+python app.py
+```
+
+Open your browser and visit:
+
+`http://127.0.0.1:5000`
+
+## 🌐 Deployment
+
+The project includes a `render.yaml` configuration for deployment on Render.
+
+1. Push the project files to GitHub.
+2. Open [Render](https://render.com/
